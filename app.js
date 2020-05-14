@@ -5,9 +5,6 @@ var result = "";
 var bits = 8;
 var remainder;
 
-
-
-
 $("#input1").keyup(function(){
     
     number1 = Number($(this).val());
@@ -28,7 +25,6 @@ $("#plus").click(function(){
           
     $("#result").text(removeLeadingZeros(number1) + " + " + removeLeadingZeros(number2) + " = " + result);
     $("#result").show();
-
 
 })
 $("#minus").click(function(){
@@ -64,8 +60,6 @@ $("#multiplication").click(function(){
     result = multiplyBinary(number1, number2);
     $("#result").show();
     $("#result").text(removeLeadingZeros(number1) + " * " + removeLeadingZeros(number2) + " = " + result);
-
-
 })
 
 $('#division').click(function(){
@@ -248,7 +242,7 @@ $(document).ready(function(){
         if((inputValue == 48 || inputValue == 49)){
             return;
         }
-        alert("You can only enter 0 and 1");
+        alert("You can only enter 0 and 1  1213");
         event.preventDefault();
     });
 });
