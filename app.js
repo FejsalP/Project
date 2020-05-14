@@ -37,6 +37,9 @@ $("#minus").click(function(){
     if(checkNumbers()){
         return;
     }   
+     if(Number(number1) < Number(number2)){
+        return;
+    }
     result = addBinary(number1, twosComplement(number2));
      
 
@@ -111,8 +114,6 @@ function addBinary(num1, num2){
     num2 = String(num2);
     num1 = '0'.repeat(2) + num1;
     num2 = '0'.repeat(2) + num2;
-    console.log("NUM1 " + num1);
-    console.log("NUM2 " + num2);
     var tempResult;
     var binaryResult = "0".repeat(num1.length);
     var remainder = 0;
@@ -561,7 +562,6 @@ $("#convertBase").click(function(){
 function convertToDecimalFromBaseN(number, base){
     var result = 0;
     for(var i = 0; i < number.length; i++){
-        console.log(typeof number[number.length-1]);
         if((typeof (number[number.length-1])) == 'string'){
             result = result + Math.pow(Number(base), i) * returnNumber(number[number.length-1-i]);
         }
@@ -642,7 +642,6 @@ function returnLetter(number){
 //allowing characters based on selected base
 $(document).ready(function(){
     $("#numberToConvert").keypress(function(){
-        console.log(Number(base1));
         var inputValue = event.which;
         if(Number(base1) == 2){
             if((inputValue == 48 || inputValue == 49)){
@@ -711,7 +710,6 @@ $(document).ready(function(){
         }
         else if (Number(base1) == 15){
             if((inputValue >= 48 && inputValue <= 57) || (inputValue >= 65 && inputValue<=69) ){
-                console.log(inputValue);
                 return;
             }
         }
@@ -720,7 +718,6 @@ $(document).ready(function(){
                 return;
             }
         }
-        console.log(inputValue);
         event.preventDefault();   
     })
 })
