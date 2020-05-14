@@ -514,6 +514,7 @@ $(".ieeebits").click(function(){
 //allowing certain characters
 $(document).ready(function(){
     $("#ieee_decimal").keypress(function(){
+        console.log("AAAAAAa")
         var inputValue = event.which;
         if(inputValue == 45 || (inputValue >= 48 && inputValue <= 57) || (inputValue>=96 && inputValue <=105) || inputValue ===46){
             return;
