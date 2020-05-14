@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Binary converter and calculator</title>
+    <script type = "text/javascript" src="lib/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <div id ="container">
+    <h1>Calculator</h1>
+    <caption>You can only enter 0 and 1</caption>
+    <input type="text" id = "input1" class = 'calculatorInput' placeholder="Enter first number">
+    <br>
+    <br>
+    <caption>You can only enter 0 and 1</caption>
+    <input type="text" id = "input2" class = 'calculatorInput' placeholder="Enter second number">
+    <br>
+    <br>
+
+    <div id = "operations">
+        <button id = 'plus'>+</button>
+        <button id = 'minus'>-</button>
+        <button id = 'multiplication'>*</button>
+        <button id = 'division'>/</button>
+    </div>
+    <h4 class="h4resultremainder"> <span id="result"></span></h4>  <h4 class="h4resultremainder"><span id = "remainder"></span></h4>
+    <p id = "pbit">
+        <button class = "bits" value="4"> 4 bits</button>
+        <button class = "bits" value="8"> 8 bits</button>
+        <button class = "bits" value="16"> 16 bits</button>
+        <button class = "bits" value="32"> 32 bits</button>
+        <button class = "bits" value="64"> 64 bits</button>
+    </p>
+    
+</div>
+
+    <h1 id = "h1IEEE">Converter to/from IEEE-754 notation</h1>
+    <h4>Enter number you want to  convert to IEEE-754 notation.</h4><input id="ieee_decimal" type="text" placeholder="Enter number to convert">
+    <button id ="convert1">Convert</button>
+    <h4><span id = "result1"></span></h4>
+    
+    <h4>Enter number you want to convert from IEEE-754 notation</h4>
+    <div>
+        <input type="text" id="signbit" class ='ieeeparts' placeholder="sign bit" maxlength="1">
+    <br>
+        <input type="text" id ="biasedexponent" class ='ieeeparts' placeholder="biased exponent" maxlength="8">
+    <br>
+        <input type="text" id="mantissa" class ='ieeeparts' placeholder="mantissa" maxlength="23">
+    </div>
+    <br>
+    <button id ="convert2">Convert</button>
+    <br>
+    <h4><span id = "result2"></span></h4>
+    <p>
+        <button class = "ieeebits" id ="ieee32bits" value = "32">32 bits</button>
+        <button class = "ieeebits" id ="ieee64bits" value = "64">64 bits</button>
+
+    </p>
+    <h1 id = "h1Change">Change base</h1>
+    <h4 class='base' >Change from base</h4> <select id="selectedBase" class='base' >
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+    </select>
+    <h4 class='base' >to</h4>
+    <select id="desiredBase" class='base' >
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+    </select>
+    <input type="text" id = "numberToConvert" placeholder="Enter number to be converted"> <button id = "convertBase">Convert</button>
+
+    <h4><span id = "result3"></span></h4>
+
+    <h3>User manual</h3>
+    <p id = "info">
+        Part 1 (calculator): user has to enter 2 binary numbers (i.e. only 1 and 0 are allowed) and then click one of the operations +, - , * or / representing addition, subtraction, multiplication and division, respectively. User can change between 4, 8, 16, 32 and 64 bits. Note: changing bits will restart inputs.
+        <br>
+        Part 2.1 (conversion to IEEE-754 notation): user has to enter a decimal number and then click Convert button next to the input. User can change between 32 and 64 bits. Note: changing bits will restart input (will afect input in part 2.2).
+        <br>
+        Part 2.2 (conversion from IEEE-754 notation): user has to enter 3 parts of the IEEE-754 notation (signbit, biased exponent and mantissa) and then click Convert button next to the input. User can change between 32 ad 64 bits. Note: changing bits will restart input (will affect input in part 2.1).
+        <br>
+        Part 3 (conversion between bases): user has to select from and to which base they want to change, and also input number they would like to convert. Changing the value of the base from which user wants to change number will reset the input. 
+    </p>
+    <p id = "info">
+        This is part of the project for the class CS304 Computer Architecture at the International University of Sarajevo.
+    </p>
+</body>
+    <script type="text/javascript" src="app.js"></script>
+</html>

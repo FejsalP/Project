@@ -1,0 +1,74 @@
+body {
+    background-color: ivory;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+button {
+    background-color: burlywood;
+  height: auto;
+  width: auto;
+  font-size: 17px;
+  border: lightslategrey;
+}
+p{
+    font-size: 25px;
+}
+.h4resultremainder{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.ieeeparts {
+    margin-top: 0px;
+    scroll-margin-block-start: auto ;
+}
+.operations{
+    width: 25%;
+    
+}
+.bits{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.base{
+    display: inline-block;
+}
+
+
+#pbit{
+    margin-top: auto;
+    margin-bottom: auto ;
+}
+
+#h1IEEE{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#h1Change{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#container {
+    margin: auto;
+
+}
+
+#selectedBase{
+    display: inline-block;
+}
+
+#numberToConvert{
+    width:200px
+}
+
+#info {
+    font-size: 15px;
+    text-align: justify;
+}
