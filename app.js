@@ -518,6 +518,7 @@ $(document).ready(function(){
         if(inputValue == 45 || (inputValue >= 48 && inputValue <= 57) || (inputValue>=96 && inputValue <=105) || inputValue ===46){
             return;
         }
+        alert("You can only enter 0-9 and .");
         event.preventDefault();
     })
     $(".ieeeparts").keypress(function(){
@@ -525,6 +526,7 @@ $(document).ready(function(){
         if(inputValue==48 || inputValue == 49){
             return;
         }
+        alert("You can only enter 0 and 1");
         event.preventDefault();
         
     })
@@ -713,6 +715,7 @@ $(document).ready(function(){
                 return;
             }
         }
+        alert("Number is not in range.");
         event.preventDefault();   
     })
 })
