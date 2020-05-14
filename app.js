@@ -517,7 +517,7 @@ $(document).ready(function(){
         console.log("AAAAAAa")
         var inputValue = event.which;
         console.log(inputValue);
-        if(inputValue == 45 || (inputValue >= 48 && inputValue <= 57)s || inputValue ===46){
+        if(inputValue == 45 || (inputValue >= 48 && inputValue <= 57) || inputValue ===46){
             console.log("input val: " + inputValue);
             return;
         }
