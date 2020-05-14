@@ -248,6 +248,7 @@ $(document).ready(function(){
         if((inputValue == 48 || inputValue == 49)){
             return;
         }
+        alert("You can only enter 0 and 1");
         event.preventDefault();
     });
 });
