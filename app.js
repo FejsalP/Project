@@ -1,3 +1,7 @@
+$(document).ready(function(){
+
+
+
 //first part
 var number1 = '';
 var number2 = '';
@@ -14,7 +18,6 @@ $("#input2").keyup(function(){
     number2 = Number($(this).val())
     number2 = addLeadingZeros(number2);
 })
-$(document).ready(function(){
 $("#plus").click(function(){
     alert("test");
     $("#result").hide();
@@ -29,7 +32,7 @@ $("#plus").click(function(){
     $("#result").show();
 
 })
-})
+
 $("#minus").click(function(){
     $("#result").hide();
     $("#remainder").hide();
@@ -722,4 +725,5 @@ $(document).ready(function(){
         alert("Number is not in range.");
         event.preventDefault();   
     })
+})
 })
