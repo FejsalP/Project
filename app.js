@@ -557,8 +557,9 @@ $("#convertBase").click(function(){
     var result;
     
     result = convertToDecimalFromBaseN(number, base1);
+    console.log("from base x to base 10   " + result );
     result = convertFromDecimalToBaseN(result, base2);
-    
+    console.log("from base 10 to base y   " + result);
 
     $("#result3").text("The result is: " + result);
 })
