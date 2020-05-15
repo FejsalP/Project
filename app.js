@@ -14,6 +14,7 @@ $("#input2").keyup(function(){
     number2 = Number($(this).val())
     number2 = addLeadingZeros(number2);
 })
+$(document).ready(function(){
 $("#plus").click(function(){
     $("#result").hide();
     $("#remainder").hide();
@@ -26,6 +27,7 @@ $("#plus").click(function(){
     $("#result").text(removeLeadingZeros(number1) + " + " + removeLeadingZeros(number2) + " = " + result);
     $("#result").show();
 
+})
 })
 $("#minus").click(function(){
     $("#result").hide();
