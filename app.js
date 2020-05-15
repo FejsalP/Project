@@ -52,6 +52,7 @@ $("#minus").click(function(){
         result = result.substr(1);
         result = removeLeadingZeros(result);
     }
+    
     $("#result").text(removeLeadingZeros(number1) + " - " + removeLeadingZeros(number2) + " = " + result);
     $("#result").show();
 
@@ -269,6 +270,8 @@ $(".bits").click(function(){
     while(result.length < bits){
         result = "0" + result.substr(0);
     }
+    number1 = '';
+    number1 = '';
     $(".calculatorInput").val('');
 })
 
