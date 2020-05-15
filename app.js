@@ -47,6 +47,9 @@ $("#minus").click(function(){
     if(result.length === 0){
         result = '0';
     }
+    if(result === ''){
+        result = '0';
+    }
     if(result.length > Number(bits)){
         result = result.substr(1);
         result = removeLeadingZeros(result);
