@@ -566,14 +566,18 @@ $("#convertBase").click(function(){
 })
 function convertToDecimalFromBaseN(number, base){
     var result = 0;
+    console.log("SIZE OF NUMBER: " + number.length);
     for(var i = 0; i < number.length; i++){
         if((typeof (number[number.length-1])) == 'string'){
             result = result + Math.pow(Number(base), i) * returnNumber(number[number.length-1-i]);
         }
         else{
+            console.log("result: " + result);
             result = result + Math.pow(Number(base), i) * Number(number[number.length-1-i]);
         }
     }
+    console.log("11result: " + result);
+
     return result;
 }
 function returnNumber (letter){
