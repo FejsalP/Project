@@ -43,22 +43,15 @@ $("#minus").click(function(){
     }
     result = addBinary(number1, twosComplement(number2));
      
-
-    if(result.length == 0){
-        console.log("B");
-        result = '0';
-    }
-    if(result === ''){
-        result = '0';
-        console.log("A");
-    }
     console.log("value of result :" + result);
 
     if(result.length > Number(bits)){
         result = result.substr(1);
         result = removeLeadingZeros(result);
     }
-    console.log("type of result " + typeof result);
+    if(result.length == 0){
+        result = '0';
+    }
 
     console.log("value of result :" + result);
     $("#result").text(removeLeadingZeros(number1) + " - " + removeLeadingZeros(number2) + " = " + result);
