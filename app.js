@@ -553,6 +553,7 @@ $("#desiredBase").click(function(){
 $("#convertBase").click(function(){
     base1 = $("#selectedBase").val();
     base2 = $("#desiredBase").val();
+    alert("a");
     var number = $("#numberToConvert").val();
     var result;
     
