@@ -54,6 +54,8 @@ $("#minus").click(function(){
         result = result.substr(1);
         result = removeLeadingZeros(result);
     }
+    console.log("type of result " + typeof result);
+    
     console.log("value of result :" + result);
     $("#result").text(removeLeadingZeros(number1) + " - " + removeLeadingZeros(number2) + " = " + result);
     $("#result").show();
