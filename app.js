@@ -577,6 +577,9 @@ function convertToDecimalFromBaseN(number, base){
     return result;
 }
 function returnNumber (letter){
+    if(letter == '1'){
+        return 1;
+    }
     if(letter == '2'){
         return 2;
     }
