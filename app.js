@@ -49,10 +49,11 @@ $("#minus").click(function(){
         result = '0';
     }
     if(result.length > Number(bits)){
+        console.log("aa");
         result = result.substr(1);
         result = removeLeadingZeros(result);
     }
-    
+
     $("#result").text(removeLeadingZeros(number1) + " - " + removeLeadingZeros(number2) + " = " + result);
     $("#result").show();
 
