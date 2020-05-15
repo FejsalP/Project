@@ -366,6 +366,7 @@ $("#convert1").click(function(){
 })
 
 $("#convert2").click(function(){
+    alert("clicked");
     if($("#signbit").val() == '' || $("#biasedexponent").val() == '' || $("#mantissa").val() == ''){
         return;
     }
