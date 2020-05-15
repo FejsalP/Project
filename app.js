@@ -19,7 +19,6 @@ $("#input2").keyup(function(){
     number2 = addLeadingZeros(number2);
 })
 $("#plus").click(function(){
-    alert("test");
     $("#result").hide();
     $("#remainder").hide();
     if(checkNumbers()){
@@ -49,11 +48,10 @@ $("#minus").click(function(){
         result = '0';
     }
     if(result.length > Number(bits)){
-        console.log("aa");
         result = result.substr(1);
         result = removeLeadingZeros(result);
     }
-
+    console.log("value of result :" + result);
     $("#result").text(removeLeadingZeros(number1) + " - " + removeLeadingZeros(number2) + " = " + result);
     $("#result").show();
 
@@ -376,7 +374,6 @@ $("#convert1").click(function(){
 })
 
 $("#convert2").click(function(){
-    alert("clicked");
     if($("#signbit").val() == '' || $("#biasedexponent").val() == '' || $("#mantissa").val() == ''){
         return;
     }
