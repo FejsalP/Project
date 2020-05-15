@@ -516,7 +516,6 @@ $(document).ready(function(){
     $("#ieee_decimal").keypress(function(){
         var inputValue = event.which;
         if(inputValue == 45 || (inputValue >= 48 && inputValue <= 57) || inputValue ===46){
-            console.log("input val: " + inputValue);
             return;
         }
         alert("You can only enter 0-9 and .");
