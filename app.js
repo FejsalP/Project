@@ -42,9 +42,6 @@ $("#minus").click(function(){
         return;
     }
     result = addBinary(number1, twosComplement(number2));
-     
-    console.log("value of result :" + result);
-
     if(result.length > Number(bits)){
         result = result.substr(1);
         result = removeLeadingZeros(result);
@@ -53,7 +50,6 @@ $("#minus").click(function(){
         result = '0';
     }
 
-    console.log("value of result :" + result);
     $("#result").text(removeLeadingZeros(number1) + " - " + removeLeadingZeros(number2) + " = " + result);
     $("#result").show();
 
