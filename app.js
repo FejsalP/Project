@@ -553,14 +553,11 @@ $("#desiredBase").click(function(){
 $("#convertBase").click(function(){
     base1 = $("#selectedBase").val();
     base2 = $("#desiredBase").val();
-    alert("a");
     var number = $("#numberToConvert").val();
     var result;
     
     result = convertToDecimalFromBaseN(number, base1);
-    console.log("from base x to base 10   " + result );
     result = convertFromDecimalToBaseN(result, base2);
-    console.log("from base 10 to base y   " + result);
 
     $("#result3").text("The result is: " + result);
 })
@@ -569,10 +566,8 @@ function convertToDecimalFromBaseN(number, base){
     console.log("SIZE OF NUMBER: " + number.length);
     for(var i = 0; i < number.length; i++){
         result = result + Math.pow(Number(base), i) * returnNumber(number[number.length-1-i]);
-        console.log("result: " + result);
 
     }
-    console.log("11result: " + result);
 
     return result;
 }
