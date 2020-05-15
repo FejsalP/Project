@@ -569,7 +569,8 @@ function convertToDecimalFromBaseN(number, base){
     console.log("SIZE OF NUMBER: " + number.length);
     for(var i = 0; i < number.length; i++){
         result = result + Math.pow(Number(base), i) * returnNumber(number[number.length-1-i]);
-        
+        console.log("result: " + result);
+
     }
     console.log("11result: " + result);
 
