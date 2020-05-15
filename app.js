@@ -568,19 +568,38 @@ function convertToDecimalFromBaseN(number, base){
     var result = 0;
     console.log("SIZE OF NUMBER: " + number.length);
     for(var i = 0; i < number.length; i++){
-        if((typeof (number[number.length-1])) == 'string'){
-            result = result + Math.pow(Number(base), i) * returnNumber(number[number.length-1-i]);
-        }
-        else{
-            console.log("result: " + result);
-            result = result + Math.pow(Number(base), i) * Number(number[number.length-1-i]);
-        }
+        result = result + Math.pow(Number(base), i) * returnNumber(number[number.length-1-i]);
+        
     }
     console.log("11result: " + result);
 
     return result;
 }
 function returnNumber (letter){
+    if(letter == '2'){
+        return 2;
+    }
+    if(letter == '3'){
+        return 3;
+    }
+    if(letter == '4'){
+        return 4;
+    }
+    if(letter == '5'){
+        return 5;
+    }
+    if(letter == '6'){
+        return 6;
+    }
+    if(letter == '7'){
+        return 7;
+    }
+    if(letter == '8'){
+        return 8;
+    }
+    if(letter == '9'){
+        return 9;
+    }
     if(letter == 'A'){
         return 10;
     }
