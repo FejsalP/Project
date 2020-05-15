@@ -16,6 +16,7 @@ $("#input2").keyup(function(){
 })
 $(document).ready(function(){
 $("#plus").click(function(){
+    alert("test");
     $("#result").hide();
     $("#remainder").hide();
     if(checkNumbers()){
