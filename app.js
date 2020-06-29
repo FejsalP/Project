@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 
-
+//SELAM
 //first part
 var number1 = '';
 var number2 = '';
