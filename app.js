@@ -2,6 +2,7 @@ $(document).ready(function(){
 
 
 //SELAM
+//nije lose ovo
 //first part
 var number1 = '';
 var number2 = '';
